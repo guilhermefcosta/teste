@@ -7,6 +7,12 @@ require_once "vendor/autoload.php";
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
 
+
+
+echo Teste::foo();
+bar();
+
+
 $cliente = new Client();
 $response = $cliente->request('GET', 'https://www.youtube.com/');
 
@@ -14,26 +20,26 @@ $html = $response->getBody();
 // echo $html;
 
 
-/* $html = '<html>
+$html = '<html>
 <head>
 </head>
 <body>
     <h1>Hello World!</h1>
 </body>
-</html>'; */
+</html>'; 
 
 
 $crawler = new Crawler();
 $crawler->addHtmlContent($html);
 
-$cursos = $crawler->filter('#video-title');
+$itens = $crawler->filter('h1');
 
-// foreach ($cursos as $curso) {
-    // echo $curso->textContent;
-// }
-foreach ($cursos as $curso) {
-    echo $curso->textContent . PHP_EOL;
+foreach ($itens as $item) {
+    echo $item->textContent . PHP_EOL;
 }
+
+
+
 
 
 ?>

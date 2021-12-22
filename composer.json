@@ -2,11 +2,23 @@
     "name": "ferreira/curso-composer",
     "description": "Projeto teste de composer",
     "type": "library",
+
     "autoload": {
         "psr-4": {
             "Ferreira\\CursoComposer\\": "src/"
-        }
+        },
+
+        "classmap": [
+            "./ClasseDeslocada.php"
+        ],
+
+        "files": [
+            "./functions.php"
+        ]
     },
+
+        
+
     "authors": [
         {
             "name": "Guilherme Ferreira",
