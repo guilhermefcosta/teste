@@ -1,0 +1,22 @@
+{
+    "name": "ferreira/curso-composer",
+    "description": "Projeto teste de composer",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Ferreira\\CursoComposer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Guilherme Ferreira",
+            "email": "guifcosta.contato@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.4",
+        "symfony/dom-crawler": "5.4.0",
+        "symfony/css-selector": "5.4.0"
+        
+    }
+}
